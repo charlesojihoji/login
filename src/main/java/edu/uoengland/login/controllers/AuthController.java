@@ -39,6 +39,6 @@ public class AuthController {
         HttpSession session = httpRequest.getSession(true);
         session.setAttribute("SPRING_SECURITY_CONTEXT", securityContext);
         
-        return "Login successful for user: " + loginRequest.getEmailAddress();
+        return "Login successful for Consumer or Admin: " + loginRequest.getEmailAddress();
     }
 }

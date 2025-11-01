@@ -22,7 +22,7 @@ public class LoginController {
 		
 		loginService.saveRegistration(registrant);
 		
-		return "A new consumer has been registered.";
+		return "A new " + registrant.getRole() + " has been registered.";
 	}
 	
 	@GetMapping("/admin")

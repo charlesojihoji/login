@@ -48,7 +48,7 @@ public class SecurityConfig {
                         .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
                 )
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth", "/registerUser/**").permitAll()
+                        .requestMatchers("/api/auth/registerUser", "/api/auth/login").permitAll()
                         .requestMatchers("/api/auth/admin/**").hasRole("ADMIN")
                         .requestMatchers("/api/auth/faculty/**").hasAnyRole("FACULTY", "ADMIN")
                         .requestMatchers("/api/auth/student/**").hasAnyRole("STUDENT", "ADMIN")

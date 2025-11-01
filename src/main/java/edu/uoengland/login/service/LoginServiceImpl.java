@@ -29,7 +29,7 @@ public class LoginServiceImpl implements LoginService{
 		
 		loginRepository.save(theConsumer);
 		
-		return "A new Consumer has successfully been registered.";
+		return "A new Consumer or Admin has successfully been registered.";
 	}
 
 }

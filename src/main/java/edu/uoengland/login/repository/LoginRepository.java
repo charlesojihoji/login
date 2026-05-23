@@ -6,10 +6,10 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import edu.uoengland.login.entity.Consumer;
+import edu.uoengland.login.entity.Users;
 
 @Repository
-public interface LoginRepository extends JpaRepository<Consumer, UUID>{
+public interface LoginRepository extends JpaRepository<Users, UUID>{
 
-	Optional<Consumer> findByEmailAddress(String email);
+	Optional<Users> findByEmailAddress(String email);
 }

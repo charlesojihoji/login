@@ -10,8 +10,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="consumer")
-public class Consumer {
+@Table(name="users")
+public class Users {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -34,11 +34,11 @@ public class Consumer {
 	@Column(name="role", nullable=false)
 	private String role;
 	
-	public Consumer() {
+	public Users() {
 		super();
 	}
 
-	public Consumer(UUID userId, String fullName, String emailAddress, String phoneNumber, String password,
+	public Users(UUID userId, String fullName, String emailAddress, String phoneNumber, String password,
 			String role) {
 		super();
 		this.userId = userId;

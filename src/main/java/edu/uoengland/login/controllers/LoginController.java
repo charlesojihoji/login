@@ -1,6 +1,7 @@
 package edu.uoengland.login.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +13,7 @@ import edu.uoengland.login.service.LoginService;
 
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin("*")
 public class LoginController {
 
 	@Autowired

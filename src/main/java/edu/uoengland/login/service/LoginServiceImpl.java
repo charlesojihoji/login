@@ -5,7 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import edu.uoengland.login.dto.Registration;
-import edu.uoengland.login.entity.Consumer;
+import edu.uoengland.login.entity.Users;
 import edu.uoengland.login.repository.LoginRepository;
 
 @Service
@@ -17,19 +17,19 @@ public class LoginServiceImpl implements LoginService{
 	@Override
 	public String saveRegistration(Registration registrant) {
 
-		Consumer theConsumer = new Consumer();
+		Users theUser = new Users();
 		
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		
-		theConsumer.setFullName(registrant.getFullName());
-		theConsumer.setEmailAddress(registrant.getEmailAddress());
-		theConsumer.setPhoneNumber(registrant.getPhoneNumber());
-		theConsumer.setPassword(encoder.encode(registrant.getPassword()));
-		theConsumer.setRole(registrant.getRole().toUpperCase());
+		theUser.setFullName(registrant.getFullName());
+		theUser.setEmailAddress(registrant.getEmailAddress());
+		theUser.setPhoneNumber(registrant.getPhoneNumber());
+		theUser.setPassword(encoder.encode(registrant.getPassword()));
+		theUser.setRole(registrant.getRole().toUpperCase());
 		
-		loginRepository.save(theConsumer);
+		loginRepository.save(theUser);
 		
-		return "A new Consumer or Admin has successfully been registered.";
+		return "A new User or Admin has successfully been registered.";
 	}
 
 }

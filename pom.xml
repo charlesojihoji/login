@@ -9,11 +9,11 @@
 		<version>3.2.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>edu.uoengland</groupId>
-	<artifactId>login</artifactId>
+	<groupId>com.softel</groupId>
+	<artifactId>softelloginservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>login</name>
-	<description>The Login Microservice Spring Boot Application for the UOE Project</description>
+	<name>softelloginservice</name>
+	<description>The Login Microservice Spring Boot Application for the Softel Project</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.0</spring-cloud.version>

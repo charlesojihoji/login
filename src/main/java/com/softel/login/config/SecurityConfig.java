@@ -1,4 +1,4 @@
-package edu.uoengland.login.config;
+package com.softel.login.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import edu.uoengland.login.service.CustomUserDetailsService;
+import com.softel.login.service.CustomUserDetailsService;
 
 @Configuration
 public class SecurityConfig {
@@ -49,11 +49,9 @@ public class SecurityConfig {
                 )
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/registerUser", "/api/auth/login").permitAll()
-                        .requestMatchers("/api/auth/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/auth/faculty/**").hasAnyRole("FACULTY", "ADMIN")
-                        .requestMatchers("/api/auth/student/**").hasAnyRole("STUDENT", "ADMIN", "FACULTY")
-                        .requestMatchers("/api/auth/visitor/**").hasAnyRole("VISITOR", "ADMIN")
-                        .requestMatchers("/api/auth/staff/**").hasAnyRole("STAFF", "ADMIN")
+                        .requestMatchers("/api/auth/hotel/**").hasRole("ADMIN")
+                        .requestMatchers("/api/auth/ratings/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/api/auth/users/**").hasAnyRole("USER", "VISITOR", "ADMIN")
                         .anyRequest().authenticated()
                 )
         .formLogin(form -> form.disable())

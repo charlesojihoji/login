@@ -1,4 +1,4 @@
-package edu.uoengland.login.entity;
+package com.softel.login.entity;
 
 import java.util.UUID;
 
@@ -30,7 +30,7 @@ public class Users {
 	@Column(name="password", nullable=false)
 	private String password;
 	
-	//admin or faculty or student or visitor
+	//admin or user or visitor
 	@Column(name="role", nullable=false)
 	private String role;
 	

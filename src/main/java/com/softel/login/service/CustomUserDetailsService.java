@@ -1,4 +1,4 @@
-package edu.uoengland.login.service;
+package com.softel.login.service;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import edu.uoengland.login.entity.Users;
-import edu.uoengland.login.repository.LoginRepository;
+import com.softel.login.entity.Users;
+import com.softel.login.repository.LoginRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

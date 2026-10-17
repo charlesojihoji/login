@@ -1,4 +1,4 @@
-package edu.uoengland.login.dto;
+package com.softel.login.dto;
 
 import java.util.List;
 

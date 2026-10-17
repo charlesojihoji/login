@@ -1,4 +1,4 @@
-package edu.uoengland.login.controllers;
+package com.softel.login.controllers;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -11,8 +11,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
-import edu.uoengland.login.dto.LoginResponse;
-import edu.uoengland.login.entity.Users;
+import com.softel.login.dto.LoginResponse;
+import com.softel.login.entity.Users;
+
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 

@@ -1,4 +1,4 @@
-package edu.uoengland.login.tempencoder;
+package com.softel.login.tempencoder;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

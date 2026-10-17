@@ -1,15 +1,16 @@
-package edu.uoengland.login.controllers;
+package com.softel.login.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import edu.uoengland.login.dto.Registration;
-import edu.uoengland.login.service.LoginService;
+import com.softel.login.dto.Registration;
+import com.softel.login.service.LoginService;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -33,21 +34,21 @@ public class LoginController {
 		return "The admin function works well.";
 	}
 	
-	@GetMapping("/faculty")
-	public String facultyTest() {
+	@GetMapping("/users")
+	public String userTest() {
 		
-		return "The faculty function works well.";
-	}
-	
-	@GetMapping("/student")
-	public String studentTest() {
-		
-		return "The student function works well.";
+		return "The user function works well.";
 	}
 	
 	@GetMapping("/visitor")
 	public String visitorTest() {
 		
 		return "The visitor function works well.";
+	}
+	
+	@PutMapping("/updateUser")
+	public String updateUser(@RequestBody Registration registrant) {
+		
+		return "The user with the " + registrant.getRole() + " role has been updated.";
 	}
 }

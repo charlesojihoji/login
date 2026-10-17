@@ -1,4 +1,4 @@
-package edu.uoengland.login;
+package com.softel.login;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

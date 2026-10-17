@@ -1,12 +1,14 @@
-package edu.uoengland.login.service;
+package com.softel.login.service;
+
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import edu.uoengland.login.dto.Registration;
-import edu.uoengland.login.entity.Users;
-import edu.uoengland.login.repository.LoginRepository;
+import com.softel.login.dto.Registration;
+import com.softel.login.entity.Users;
+import com.softel.login.repository.LoginRepository;
 
 @Service
 public class LoginServiceImpl implements LoginService{
@@ -31,5 +33,19 @@ public class LoginServiceImpl implements LoginService{
 		
 		return "A new User or Admin has successfully been registered.";
 	}
+
+	@Override
+	public void updateUser(Registration registrant) {
+
+		Optional<Users> user = loginRepository.findById(registrant.getUserId());
+		
+		if(!user.isEmpty()) {
+			
+			user = Optional.ofNullable(user.get());
+			
+			user.set
+		}
+	}
+	
 
 }
